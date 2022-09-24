@@ -28,9 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     print(error.localizedDescription)
              } else if let data = data {
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-
                  self.movies = dataDictionary["results"] as! [[String : Any]]
-                 print(self.movies)
                  self.tableView.reloadData()
 
              }
@@ -56,6 +54,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Find the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        //Pass the movie into the DetailViewController
+        let detailViewController = segue.destination as! DetailViewController
+        detailViewController.movie = movie
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 

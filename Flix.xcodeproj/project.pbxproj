@@ -20,6 +20,11 @@
 		96223B4028D5514700DEC8FD /* FlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96223B3F28D5514700DEC8FD /* FlixUITests.swift */; };
 		96223B4228D5514700DEC8FD /* FlixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96223B4128D5514700DEC8FD /* FlixUITestsLaunchTests.swift */; };
 		96223B4F28D5668500DEC8FD /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96223B4E28D5668500DEC8FD /* MovieCell.swift */; };
+		96FFCEA928DD435A0078393A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFCEA828DD435A0078393A /* DetailViewController.swift */; };
+		96FFCEAB28DE414A0078393A /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFCEAA28DE414A0078393A /* GridViewController.swift */; };
+		96FFCEAD28DEBD310078393A /* MovieGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFCEAC28DEBD310078393A /* MovieGridCell.swift */; };
+		96FFCEAF28DEC8A90078393A /* GridDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFCEAE28DEC8A90078393A /* GridDetailViewController.swift */; };
+		96FFCEB128DECBD90078393A /* TrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFCEB028DECBD90078393A /* TrailerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,11 @@
 		96223B3F28D5514700DEC8FD /* FlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixUITests.swift; sourceTree = "<group>"; };
 		96223B4128D5514700DEC8FD /* FlixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		96223B4E28D5668500DEC8FD /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		96FFCEA828DD435A0078393A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		96FFCEAA28DE414A0078393A /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		96FFCEAC28DEBD310078393A /* MovieGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridCell.swift; sourceTree = "<group>"; };
+		96FFCEAE28DEC8A90078393A /* GridDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridDetailViewController.swift; sourceTree = "<group>"; };
+		96FFCEB028DECBD90078393A /* TrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerViewController.swift; sourceTree = "<group>"; };
 		B6386B308439550CFB809BA4 /* Pods-FlixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixTests.release.xcconfig"; path = "Target Support Files/Pods-FlixTests/Pods-FlixTests.release.xcconfig"; sourceTree = "<group>"; };
 		C39E1373915181BBD3FBBA00 /* Pods-FlixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixTests.debug.xcconfig"; path = "Target Support Files/Pods-FlixTests/Pods-FlixTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE7342C7B1F199AC84CDA1C3 /* Pods-Flix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix.debug.xcconfig"; path = "Target Support Files/Pods-Flix/Pods-Flix.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,7 +123,6 @@
 				C39E1373915181BBD3FBBA00 /* Pods-FlixTests.debug.xcconfig */,
 				B6386B308439550CFB809BA4 /* Pods-FlixTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -145,11 +154,16 @@
 				96223B1E28D5514600DEC8FD /* AppDelegate.swift */,
 				96223B2028D5514600DEC8FD /* SceneDelegate.swift */,
 				96223B2228D5514600DEC8FD /* ViewController.swift */,
+				96FFCEA828DD435A0078393A /* DetailViewController.swift */,
+				96FFCEAA28DE414A0078393A /* GridViewController.swift */,
+				96FFCEAE28DEC8A90078393A /* GridDetailViewController.swift */,
+				96FFCEB028DECBD90078393A /* TrailerViewController.swift */,
 				96223B2428D5514600DEC8FD /* Main.storyboard */,
 				96223B2728D5514600DEC8FD /* Assets.xcassets */,
 				96223B2928D5514600DEC8FD /* LaunchScreen.storyboard */,
 				96223B2C28D5514600DEC8FD /* Info.plist */,
 				96223B4E28D5668500DEC8FD /* MovieCell.swift */,
+				96FFCEAC28DEBD310078393A /* MovieGridCell.swift */,
 			);
 			path = Flix;
 			sourceTree = "<group>";
@@ -244,6 +258,7 @@
 				TargetAttributes = {
 					96223B1A28D5514600DEC8FD = {
 						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
 					};
 					96223B3028D5514600DEC8FD = {
 						CreatedOnToolsVersion = 14.0;
@@ -411,9 +426,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				96223B2328D5514600DEC8FD /* ViewController.swift in Sources */,
+				96FFCEAF28DEC8A90078393A /* GridDetailViewController.swift in Sources */,
 				96223B1F28D5514600DEC8FD /* AppDelegate.swift in Sources */,
+				96FFCEAB28DE414A0078393A /* GridViewController.swift in Sources */,
+				96FFCEA928DD435A0078393A /* DetailViewController.swift in Sources */,
 				96223B4F28D5668500DEC8FD /* MovieCell.swift in Sources */,
 				96223B2128D5514600DEC8FD /* SceneDelegate.swift in Sources */,
+				96FFCEAD28DEBD310078393A /* MovieGridCell.swift in Sources */,
+				96FFCEB128DECBD90078393A /* TrailerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +609,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SM3YH4Q938;
@@ -611,6 +632,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ssameen.Flix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -622,6 +644,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SM3YH4Q938;
