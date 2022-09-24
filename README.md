@@ -18,7 +18,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 <img src="./flix2.gif" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+Had to figure out how to use Web View from the Apple Documentation. Also, getting the video key was a hassle but after an hour of struggle, I am feeling good about networking.
 
 ---
 
